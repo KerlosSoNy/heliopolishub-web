@@ -13,6 +13,20 @@
   --animate-spin-fast:"spin 0.8s linear infinite";
   --animate-pulse-glow:"pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite";
 
+  --animate-cell-ripple: cell-ripple var(--duration, 200ms) ease-out none 1
+    var(--delay, 0ms);
+  
+    @keyframes cell-ripple {
+      0% {
+        opacity: 0.4;
+      }
+      50% {
+        opacity: 0.8;
+      }
+      100% {
+        opacity: 0.4;
+      }
+    }
   --color-primary:#00d4ff;
   --color-secondary:#0099ff;
   --font-heading: var(--font-sans);

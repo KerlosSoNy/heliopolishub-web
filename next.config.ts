@@ -18,6 +18,11 @@ const nextConfig: NextConfig = {
         hostname: 'via.placeholder.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'aceternity.com',
+        pathname: '/**',
+      },
     ],
   },
 };
