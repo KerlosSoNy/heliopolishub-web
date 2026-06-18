@@ -1,11 +1,40 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import ClientLoader from '@/components/ClientLoader';
-import { Inter } from "next/font/google";
-import { cn } from "@/lib/utils";
-import FloatingDockDemo from '@/components/floating-dock-demo';
+import localFont from 'next/font/local'
+import Navbar from '@/components/navbar/Navbar';
+import AOSInit from '@/lib/AOSInit';
+import AnimationWrapper from '@/lib/AnimationWrapper';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
+const poppins = localFont({
+  src: [
+    {
+      path: '../../public/fonts/poppins/Poppins-Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/poppins/Poppins-SemiBold.ttf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/poppins/Poppins-Medium.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/poppins/Poppins-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/poppins/Poppins-Light.ttf',
+      weight: '300',
+      style: 'normal',
+    },
+  ]
+})
 
 export const metadata: Metadata = {
   title: 'Heliopolis Hub | Premium Diecast Cars & Scale Models Egypt',
@@ -44,18 +73,21 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={cn("font-sans", inter.variable)}>
-      <body className="relative text-white bg-black max-w-screen overflow-hidden">
-        <ClientLoader />
-        <FloatingDockDemo />
-        <div className="z-5">
-          {children}
+    <html lang="en" className={poppins.className}>
+      <body className={poppins.className}>
+        <div id="modal-root"></div>
+        <AOSInit />
+      <ClientLoader />
+        <div
+          id="main-content"
+          className="w-full overflow-x-hidden bg-foundation-black-500"
+        >
+          <Navbar />
+          <AnimationWrapper>
+            {children}
+          </AnimationWrapper>
         </div>
       </body>
     </html>

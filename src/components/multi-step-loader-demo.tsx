@@ -30,8 +30,8 @@ const loadingStates = [
 
 export default function MultiStepLoaderDemo({ isLoading }: { isLoading: boolean }) {
   return (
-    <div className="w-screen h-screen max-w-screen max-h-screen overflow-hidden z-120! flex items-center justify-center">
-      <Loader loadingStates={loadingStates} loading={isLoading} duration={1500} />
+    <div className="w-screen h-screen max-w-screen max-h-screen bg-transparent overflow-hidden z-120 fixed flex items-center justify-center">
+      <Loader loadingStates={loadingStates} loading={isLoading} duration={1000} />
     </div>
   );
 }
