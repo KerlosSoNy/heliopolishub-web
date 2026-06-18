@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
 const stats = [
@@ -37,13 +38,12 @@ export default function Hero() {
   return (
     <section className="relative flex h-screen w-full flex-col items-start justify-end">
       <div
-        className="absolute inset-0 bg-center bg-cover"
-        style={{
-          backgroundImage:
-            "url('/images/hero.jpg')",
-        }}
+        className="absolute w-full h-full inset-0 bg-center bg-cover"
       >
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative w-full h-full">
+          <Image fill src="/images/hero.JPG" alt="Background" className="object-cover" />
+          <div className="absolute inset-0 bg-black/40" />
+        </div>
       </div>
 
       <div className="relative z-10 w-full max-w-4xl px-4 text-white sm:px-8 lg:px-16">
