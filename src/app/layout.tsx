@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import ClientLoader from '@/components/ClientLoader';
 import localFont from 'next/font/local'
 import Navbar from '@/components/navbar/Navbar';
 import AOSInit from '@/lib/AOSInit';
@@ -79,7 +78,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={poppins.className}>
         <div id="modal-root"></div>
         <AOSInit />
-        <ClientLoader />
         <div
           id="main-content"
           className="w-full overflow-x-hidden bg-black"

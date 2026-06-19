@@ -52,7 +52,15 @@ const Navbar = () => {
                         name: "Home",
                     }}
                     image>
-                    <Image src={'/images/heliopolisWords.png'} alt="Heliopolis Hub Logo" width={200} height={200} className={"w-28 3xl:w-34 h-12 3xl:h-14"} />
+                    <Image
+                        priority
+                        quality={50}
+                        src={'/images/heliopolisWords.png'}
+                        alt="Heliopolis Hub Logo"
+                        width={224}
+                        height={96}
+                        className="w-28 3xl:w-34 h-12 3xl:h-14"
+                    />
                 </TransitionLink>
                 <div className="flex flex-row items-center gap-10">
                     <NavLinks activeTab={activeTab} links={links} />
