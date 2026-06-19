@@ -85,7 +85,7 @@ export default function AboutSection3() {
 
                     <TimelineContent
                         as="figure"
-                        animationNum={4}
+                        animationNum={1}
                         timelineRef={heroRef}
                         customVariants={scaleVariants}
                         className="relative group"
@@ -121,7 +121,7 @@ export default function AboutSection3() {
                     <div className="flex flex-wrap lg:justify-start justify-between items-center py-3 text-sm">
                         <TimelineContent
                             as="div"
-                            animationNum={5}
+                            animationNum={2}
                             timelineRef={heroRef}
                             customVariants={revealVariants}
                             className="flex gap-4"
@@ -139,7 +139,7 @@ export default function AboutSection3() {
                         <div className="lg:absolute right-0 bottom-16 flex lg:flex-col flex-row-reverse lg:gap-0 gap-4">
                             <TimelineContent
                                 as="div"
-                                animationNum={6}
+                                animationNum={3}
                                 timelineRef={heroRef}
                                 customVariants={revealVariants}
                                 className="flex lg:text-4xl sm:text-3xl text-2xl items-center gap-2 mb-2"
@@ -184,14 +184,14 @@ export default function AboutSection3() {
 
                         <TimelineContent
                             as="div"
-                            animationNum={9}
+                            animationNum={4}
                             timelineRef={heroRef}
                             customVariants={revealVariants}
                             className="grid md:grid-cols-2 gap-8 text-white"
                         >
                             <TimelineContent
                                 as="div"
-                                animationNum={10}
+                                animationNum={5}
                                 timelineRef={heroRef}
                                 customVariants={revealVariants}
                                 className="sm:text-base text-xs"
@@ -204,7 +204,7 @@ export default function AboutSection3() {
                             </TimelineContent>
                             <TimelineContent
                                 as="div"
-                                animationNum={11}
+                                animationNum={6}
                                 timelineRef={heroRef}
                                 customVariants={revealVariants}
                                 className="sm:text-base text-xs"
@@ -222,7 +222,7 @@ export default function AboutSection3() {
                         <div className="text-right">
                             <TimelineContent
                                 as="div"
-                                animationNum={12}
+                                animationNum={7}
                                 timelineRef={heroRef}
                                 customVariants={revealVariants}
                                 className="text-red-500 text-2xl font-bold mb-2 tracking-wide"
@@ -231,7 +231,7 @@ export default function AboutSection3() {
                             </TimelineContent>
                             <TimelineContent
                                 as="div"
-                                animationNum={13}
+                                animationNum={8}
                                 timelineRef={heroRef}
                                 customVariants={revealVariants}
                                 className="text-white text-sm mb-8"
@@ -241,7 +241,7 @@ export default function AboutSection3() {
 
                             <TimelineContent
                                 as="div"
-                                animationNum={14}
+                                animationNum={9}
                                 timelineRef={heroRef}
                                 customVariants={revealVariants}
                                 className="mb-6"
@@ -253,7 +253,7 @@ export default function AboutSection3() {
 
                             <TimelineContent
                                 as="button"
-                                animationNum={15}
+                                animationNum={10}
                                 timelineRef={heroRef}
                                 customVariants={revealVariants}
                             >

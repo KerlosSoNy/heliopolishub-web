@@ -79,10 +79,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={poppins.className}>
         <div id="modal-root"></div>
         <AOSInit />
-        {/* <ClientLoader /> */}
+        <ClientLoader />
         <div
           id="main-content"
-          className="w-full overflow-x-hidden bg-foundation-black-500"
+          className="w-full overflow-x-hidden bg-black"
         >
           <Navbar />
           <AnimationWrapper>
