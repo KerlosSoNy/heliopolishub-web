@@ -2,6 +2,9 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+body{
+  background-color: #161613;
+}
 @custom-variant dark (&:is(.dark *));
 
 .loader-overlay {

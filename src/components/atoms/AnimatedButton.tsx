@@ -91,7 +91,7 @@ export default function AnimatedLinkButton({
     href,
     onClick,
     label = "View all",
-    className = "shrink-0",
+    className = "shrink-0 cursor-pointer",
     icon: Icon = ArrowRight,
     inverted = false,
     url,
