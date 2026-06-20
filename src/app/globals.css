@@ -136,7 +136,6 @@ body{
   --color-color-primary-light: var(----color-primary-light);
   --color-color-accent-light: var(----color-accent-light);
   --color-color-hightlight-light: var(----color-hightlight-light)
-
 }
 
 @layer base {
@@ -167,9 +166,4 @@ body{
 }
 *::-webkit-scrollbar-thumb {
     border-radius: 0.25rem;
-}
-
-:root {
-  --font-display: 'Outfit', sans-serif;
-  --font-sans: 'Inter Tight', sans-serif;
 }

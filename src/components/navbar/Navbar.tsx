@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { useActiveTab } from '@/lib/hooks/useActiveTab';
 import TransitionLink from './TransitionLink';
 import NavLinks from './NavLinks';
@@ -41,6 +42,11 @@ const Navbar = () => {
     }
 
     useActiveTab(handleActiveTab)
+
+    const pathname = usePathname();
+    const isDashboard = pathname?.startsWith('/dashboard');
+
+    if (isDashboard) return null;
 
     return (
         <header

@@ -4,6 +4,8 @@ import localFont from 'next/font/local'
 import Navbar from '@/components/navbar/Navbar';
 import AOSInit from '@/lib/AOSInit';
 import AnimationWrapper from '@/lib/AnimationWrapper';
+import { AuthProvider } from '@/context/AuthContext';
+import { ToastProvider } from '@/context/ToastContext';
 
 const poppins = localFont({
   src: [
@@ -74,19 +76,24 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
+
     <html lang="en" className={poppins.className}>
       <body className={poppins.className}>
-        <div id="modal-root"></div>
-        <AOSInit />
-        <div
-          id="main-content"
-          className="w-full overflow-x-hidden bg-black"
-        >
-          <Navbar />
-          <AnimationWrapper>
-            {children}
-          </AnimationWrapper>
-        </div>
+        {/* <AuthProvider> */}
+        <ToastProvider>
+          <div id="modal-root"></div>
+          <AOSInit />
+          <div
+            id="main-content"
+            className="w-full overflow-x-hidden bg-black"
+          >
+            <Navbar />
+            <AnimationWrapper>
+              {children}
+            </AnimationWrapper>
+          </div>
+        </ToastProvider>
+        {/* </AuthProvider> */}
       </body>
     </html>
   );
