@@ -1,9 +1,6 @@
+import { getSupabaseServer } from '@/lib/supabase-server';
 import { createClient } from '@supabase/supabase-js'
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-)
 
 // GET single product
 export async function GET(
@@ -11,6 +8,7 @@ export async function GET(
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const supabase = getSupabaseServer();
     const { id } = await params
 
     const { data, error } = await supabase
@@ -34,7 +32,7 @@ export async function PUT(
   try {
     const { id } = await params
     const body = await request.json()
-
+    const supabase = getSupabaseServer();
     const { data, error } = await supabase
       .from('products')
       .update(body)
@@ -56,7 +54,7 @@ export async function DELETE(
 ) {
   try {
     const { id } = await params
-
+    const supabase = getSupabaseServer();
     const { error } = await supabase
       .from('products')
       .delete()

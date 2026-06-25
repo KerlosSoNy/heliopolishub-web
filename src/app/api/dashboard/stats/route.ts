@@ -5,7 +5,6 @@ export async function GET(request: NextRequest) {
   try {
     const supabase = getSupabaseServer();
 
-    // Get total products count
     const { count: totalProducts } = await supabase
       .from("products")
       .select("*", { count: "exact", head: true });

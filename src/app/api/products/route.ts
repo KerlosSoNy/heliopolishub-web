@@ -1,13 +1,10 @@
+import { getSupabaseServer } from '@/lib/supabase-server';
 import { createClient } from '@supabase/supabase-js'
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY! 
-)
 
 // GET all products
 export async function GET(request: Request) {
   try {
+    const supabase = getSupabaseServer();
     const { data, error } = await supabase
       .from('products')
       .select('*')
@@ -23,6 +20,7 @@ export async function GET(request: Request) {
 // POST - Create product
 export async function POST(request: Request) {
   try {
+    const supabase = getSupabaseServer();
     const body = await request.json()
     
     const { data, error } = await supabase
