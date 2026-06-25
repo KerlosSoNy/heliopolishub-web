@@ -108,7 +108,7 @@ function LogoCard({ logo, className, children, ...props }: LogoCardProps) {
     return (
         <div
             className={cn(
-                "flex items-center justify-center bg-background px-4 py-8 md:p-10",
+                "flex items-center justify-center bg-background px-4 py-2 md:p-10",
                 className
             )}
             {...props}
