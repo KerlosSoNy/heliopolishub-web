@@ -1,21 +1,24 @@
 import { createClient } from "@supabase/supabase-js";
 import { NextRequest, NextResponse } from "next/server";
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseServiceKey = process.env.NEXT_PUBLIC_SECRET_KEY!;
-
-if (!supabaseUrl || !supabaseServiceKey) {
-  throw new Error("Missing Supabase environment variables");
-}
-
-const supabase = createClient(supabaseUrl, supabaseServiceKey);
-
 export async function POST(request: NextRequest) {
   try {
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseServiceKey = process.env.NEXT_PUBLIC_SECRET_KEY;
+
+    if (!supabaseUrl || !supabaseServiceKey) {
+      console.error("Missing Supabase environment variables");
+      return NextResponse.json(
+        { error: "Server configuration error" },
+        { status: 500 }
+      );
+    }
+
+    const supabase = createClient(supabaseUrl, supabaseServiceKey);
+
     const body = await request.json();
     const { email } = body;
 
-    // Validate input
     if (!email || typeof email !== "string") {
       return NextResponse.json(
         { error: "Email is required and must be a string" },
@@ -30,21 +33,12 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Send password reset email via Supabase
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
       redirectTo: `${process.env.NEXT_PUBLIC_APP_URL}/reset-password`,
     });
 
     if (error) {
       console.error("Supabase reset password error:", error);
-      // Still return success for security reasons
-      return NextResponse.json(
-        {
-          message:
-            "If an account exists with this email, you will receive a password reset link.",
-        },
-        { status: 200 }
-      );
     }
 
     return NextResponse.json(
@@ -57,7 +51,6 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error("Forgot password error:", error);
 
-    // More detailed error logging
     if (error instanceof SyntaxError) {
       return NextResponse.json(
         { error: "Invalid request format" },
