@@ -1,8 +1,8 @@
 import { createClient } from "@supabase/supabase-js";
 import { NextRequest, NextResponse } from "next/server";
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseServiceKey = process.env.NEXT_PUBLIC_SECRET_KEY;
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+const supabaseServiceKey = process.env.NEXT_PUBLIC_SECRET_KEY!;
 
 if (!supabaseUrl || !supabaseServiceKey) {
   throw new Error("Missing Supabase environment variables");
