@@ -50,8 +50,8 @@ const Navbar = () => {
 
     return (
         <header
-            className={"px-5 md:px-6 2xl:px-12.5 py-4 2xl:py-6 w-full bg-black drop-shadow-2xl drop-shadow-white/10 z-100 fixed top-0 h-fit right-0 text-white"}>
-            <nav className={" flex justify-between lg:justify-evenly items-center gap-10 2xl:gap-16 list-none w-full"}>
+            className={"px-5 md:px-6 2xl:px-12.5 w-full bg-black drop-shadow-md drop-shadow-white/5 z-100 fixed top-0 h-fit right-0 text-white"}>
+            <nav className={" flex justify-between xl:justify-evenly items-center gap-10 2xl:gap-16 list-none w-full"}>
                 <TransitionLink
                     link={{
                         path: "/",
@@ -61,11 +61,11 @@ const Navbar = () => {
                     <Image
                         priority
                         quality={50}
-                        src={'/images/heliopolisWords.png'}
+                        src={'/images/withShadow.png'}
                         alt="Heliopolis Hub Logo"
                         width={224}
                         height={96}
-                        className="w-28 3xl:w-34 h-12 3xl:h-14"
+                        className="w-20 lg:w-34 h-18 lg:h-32 lg:-my-4 object-cover"
                     />
                 </TransitionLink>
                 <div className="flex flex-row items-center gap-10">

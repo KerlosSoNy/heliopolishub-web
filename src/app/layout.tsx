@@ -6,6 +6,7 @@ import AOSInit from '@/lib/AOSInit';
 import AnimationWrapper from '@/lib/AnimationWrapper';
 import { AuthProvider } from '@/context/AuthContext';
 import { ToastProvider } from '@/context/ToastContext';
+import Footer from '@/components/footer/Footer';
 
 const poppins = localFont({
   src: [
@@ -53,11 +54,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Heliopolis Hub | Premium Diecast Cars & Scale Models Egypt',
     description: 'The ultimate marketplace to buy, sell, and trade premium diecast cars in Egypt. Find rare scale models from top brands.',
-    url: 'https://heliopolishub.com',
+    url: 'https://heliopoliscore.com',
     siteName: 'Heliopolis Hub',
     images: [
       {
-        url: '/og-image.jpg',
+        url: './favicon.ico',
         width: 1200,
         height: 630,
         alt: 'Heliopolis Hub - Diecast Store Egypt',
@@ -70,7 +71,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Heliopolis Hub | Premium Diecast Cars & Scale Models Egypt',
     description: 'The ultimate marketplace to buy, sell, and trade premium diecast cars in Egypt.',
-    images: ['/og-image.jpg'],
+    images: ['./favicon.ico'],
   },
 };
 
@@ -79,7 +80,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
     <html lang="en" className={poppins.className}>
       <body className={poppins.className}>
-        {/* <AuthProvider> */}
         <ToastProvider>
           <div id="modal-root"></div>
           <AOSInit />
@@ -91,6 +91,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <AnimationWrapper>
               {children}
             </AnimationWrapper>
+            <Footer />
           </div>
         </ToastProvider>
         {/* </AuthProvider> */}

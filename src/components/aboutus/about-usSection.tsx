@@ -257,10 +257,9 @@ export default function AboutSection3() {
                                 timelineRef={heroRef}
                                 customVariants={revealVariants}
                             >
-                                <AnimatedLinkButton
+                                <div
                                     onClick={() => console.log('Navigating to collections')}
-                                    label={`EXPLORE THE HUB`}
-                                />
+                                >EXPLORE THE HUB</div>
                             </TimelineContent>
                         </div>
                     </div>

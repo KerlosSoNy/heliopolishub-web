@@ -33,7 +33,7 @@ const TransitionLink: FC<Props> = ({ active, link, children, onclick }) => {
             }
             await handleTransition(e, link.path)
         }} href={link.path}
-            className={cn("text-nowrap text-white/50 hover:text-foundation-grey-50 font-normal lg:text-[12px] xl:text-[14px] 2xl:text-[18px] 3xl:text-[18px]", {
+            className={cn("text-nowrap group text-white/50 hover:text-foundation-grey-50 font-normal text-[18px]! lg:text-[12px] xl:text-[14px] 2xl:text-[18px] 3xl:text-[18px]", {
                 "text-white": active
             })}
         >{children ? children : link.name}</Link>
