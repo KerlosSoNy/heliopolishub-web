@@ -13,7 +13,7 @@ export function LogoCloud() {
             <LogoCard
                 data-aos="fade-right"
                 data-aos-duration="1000"
-                className="relative border-r border-b bg-white dark:bg-secondary/30"
+                className="relative border-r border-b bg-white! "
                 logo={{
                     src: "/images/logos/miniGt.png",
                     alt: "Mini GT",
@@ -25,7 +25,7 @@ export function LogoCloud() {
             <LogoCard
                 data-aos="fade-right"
                 data-aos-duration="1200"
-                className="border-b md:border-r"
+                className="border-b md:border-r bg-black!"
                 logo={{
                     src: "/images/logos/kaidoHouse.png",
                     alt: "KaidoHouse",
@@ -35,7 +35,7 @@ export function LogoCloud() {
             <LogoCard
                 data-aos="fade-right"
                 data-aos-duration="1400"
-                className="relative border-r border-b md:bg-white dark:md:bg-secondary/30"
+                className="relative border-r border-b bg-white! "
                 logo={{
                     src: "/images/logos/inno64.png",
                     alt: "Inno64",
@@ -48,7 +48,7 @@ export function LogoCloud() {
             <LogoCard
                 data-aos="fade-right"
                 data-aos-duration="1600"
-                className="relative border-b bg-secondary md:bg-background dark:bg-secondary/30 md:dark:bg-background"
+                className="relative border-b  bg-black! "
                 logo={{
                     src: "/images/logos/hotWheels.png",
                     alt: "Hot Wheels Logo",
@@ -58,7 +58,7 @@ export function LogoCloud() {
             <LogoCard
                 data-aos="fade-left"
                 data-aos-duration="1000"
-                className="relative border-r border-b bg-white md:border-b-0 md:bg-background dark:bg-secondary/30 md:dark:bg-background"
+                className="relative border-r border-b bg-black!"
                 logo={{
                     src: "/images/logos/tarmacWorks.png",
                     alt: "Tarmac Works Logo",
@@ -70,7 +70,7 @@ export function LogoCloud() {
             <LogoCard
                 data-aos="fade-left"
                 data-aos-duration="1200"
-                className="border-b  md:border-r md:border-b-0 md:bg-white dark:md:bg-secondary/30"
+                className="border-b  md:border-r bg-white!"
                 logo={{
                     src: "/images/logos/poprace.webp",
                     alt: "Pop Race Logo",
@@ -80,7 +80,7 @@ export function LogoCloud() {
             <LogoCard
                 data-aos="fade-left"
                 data-aos-duration="1400"
-                className="border-r"
+                className="border-r bg-black!"
                 logo={{
                     src: "/images/logos/tomica.png",
                     alt: "Tomica AI Logo",
@@ -90,7 +90,7 @@ export function LogoCloud() {
             <LogoCard
                 data-aos="fade-left"
                 data-aos-duration="1600"
-                className="bg-white"
+                className="bg-white!"
                 logo={{
                     src: "/images/logos/microturbo.png",
                     alt: "Micro Turbo Logo",
