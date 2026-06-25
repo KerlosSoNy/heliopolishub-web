@@ -1,13 +1,10 @@
-import { createClient } from "@supabase/supabase-js";
+import { getSupabaseServer } from "@/lib/supabase-server";
 import { NextRequest, NextResponse } from "next/server";
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SECRET_KEY!
-);
 
 export async function GET(request: NextRequest) {
   try {
+    const supabase = getSupabaseServer();
+
     // Get total products count
     const { count: totalProducts } = await supabase
       .from("products")
@@ -35,27 +32,25 @@ export async function GET(request: NextRequest) {
     // Get recent orders
     const { data: recentOrders } = await supabase
       .from("orders")
-      .select(
-        "id, order_number, total_amount, status, created_at"
-      )
+      .select("id, order_number, total_amount, status, created_at")
       .order("created_at", { ascending: false })
       .limit(10);
 
     // Get top products
     const { data: topProducts } = await supabase
       .from("order_items")
-      .select(
-        `
+      .select(`
         product_id,
         quantity,
         products(id, name)
-      `
-      )
+      `)
       .order("quantity", { ascending: false })
       .limit(10);
 
     // Group top products
-    const productSales: { [key: string]: { id: string; name: string; sales: number } } = {};
+    const productSales: {
+      [key: string]: { id: string; name: string; sales: number };
+    } = {};
 
     topProducts?.forEach((item: any) => {
       const productId = item.product_id;
