@@ -8,9 +8,16 @@ import { Mail, Clock, Lock } from 'lucide-react';
 import { getSupabaseServer } from '@/lib/supabase-server';
 
 
+function getSupabaseBrowser() {
+    return createClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL!,
+        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+    );
+}
 
 export default function ForgotPasswordPage() {
-    const supabase = getSupabaseServer();
+    // ✅ Called inside the component, not at module level
+    const supabase = getSupabaseBrowser();
     const [email, setEmail] = useState('');
     const [otp, setOtp] = useState('');
     const [newPassword, setNewPassword] = useState('');
