@@ -6,7 +6,6 @@ export async function POST(request: NextRequest) {
       message: "Logout successful",
     });
 
-    // Clear auth cookie
     response.cookies.delete("sb-auth-token");
 
     return response;

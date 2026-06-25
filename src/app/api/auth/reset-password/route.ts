@@ -1,16 +1,23 @@
 import { createClient } from "@supabase/supabase-js";
 import { NextRequest, NextResponse } from "next/server";
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SECRET_KEY!
-);
-
 export async function POST(request: NextRequest) {
   try {
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseServiceKey = process.env.SUPABASE_SERVICE_KEY;
+
+    if (!supabaseUrl || !supabaseServiceKey) {
+      console.error("Missing Supabase environment variables");
+      return NextResponse.json(
+        { error: "Server configuration error" },
+        { status: 500 }
+      );
+    }
+
+    const supabase = createClient(supabaseUrl, supabaseServiceKey);
+
     const { token, password } = await request.json();
 
-    // Validate input
     if (!token || !password) {
       return NextResponse.json(
         { error: "Token and password are required" },
@@ -25,10 +32,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Verify token
-    const { data: userData, error: userError } = await supabase.auth.getUser(
-      token
-    );
+    const { data: userData, error: userError } = await supabase.auth.getUser(token);
 
     if (userError || !userData.user) {
       return NextResponse.json(
@@ -37,7 +41,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Update password using admin API
     const { error: updateError } = await supabase.auth.admin.updateUserById(
       userData.user.id,
       { password }
@@ -51,9 +54,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    return NextResponse.json({
-      message: "Password reset successful",
-    });
+    return NextResponse.json({ message: "Password reset successful" });
   } catch (error) {
     console.error("Reset password error:", error);
     return NextResponse.json(
