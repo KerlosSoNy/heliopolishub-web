@@ -356,7 +356,7 @@ const MetadataDisplay = memo(function MetadataDisplay({ metadata }: MetadataDisp
                     initial={{ opacity: 0, scale: 0.5, x: -15 }}
                     animate={{ opacity: 1, scale: 1, x: 0 }}
                     transition={{ delay: 0.2, duration: 0.3 }}
-                    className="absolute -right-14.5 md:-right-16.5 top-1/2 transform translate-x-full -translate-y-1/2 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border border-gray-200/30 dark:border-gray-700/30 rounded-lg p-2.5 shadow-lg"
+                    className="absolute -right-11.5 md:-right-16.5 top-1/2 transform translate-x-full -translate-y-1/2 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border border-gray-200/30 dark:border-gray-700/30 rounded-lg p-2.5 shadow-lg"
                 >
                     <div className="flex items-center gap-2">
                         <CircularProgress value={metadata.score} size={32} />
