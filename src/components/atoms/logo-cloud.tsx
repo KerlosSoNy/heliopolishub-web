@@ -108,14 +108,14 @@ function LogoCard({ logo, className, children, ...props }: LogoCardProps) {
     return (
         <div
             className={cn(
-                "flex items-center justify-center bg-background px-4 py-2 md:p-10",
+                "flex items-center justify-center bg-background px-4 py-8 md:p-10",
                 className
             )}
             {...props}
         >
             <Image
                 alt={logo.alt}
-                className="pointer-events-none h-4 select-none w-auto! md:h-10 dark:brightness-0 dark:invert"
+                className="pointer-events-none select-none w-auto! h-10 dark:brightness-0 dark:invert"
                 height="100"
                 src={logo.src}
                 width="250"
