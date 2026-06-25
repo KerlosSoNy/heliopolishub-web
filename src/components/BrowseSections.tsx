@@ -422,14 +422,12 @@ export function DiecastHeroSection() {
             setIsKeyProductAnimating(true)
         }, 100)
     }, [])
-
     const handleProductReachCenter = useCallback((metadata: ProductMetadata) => {
         setCurrentMetadata(metadata)
         setTimeout(() => {
             setCurrentMetadata(null)
         }, 3000)
     }, [])
-
     return (
         <section className="relative container flex items-center py-20 overflow-hidden">
             <div className="absolute inset-0 bg-linear-to-br from-background via-background to-muted/30" />
