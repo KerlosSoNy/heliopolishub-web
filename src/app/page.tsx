@@ -1,25 +1,31 @@
-import { LogoCloud } from '@/components/atoms/logo-cloud';
-import Hero from './../components/hero';
-import { DiecastHeroSection } from '@/components/BrowseSections';
+import Banner from "@/components/components/Banner";
+import Blog from "@/components/components/Blog";
+import CategoryStrip from "@/components/components/CategoryStrip";
+import Footer from "@/components/components/Footer";
+import Header from "@/components/components/Header";
+import ProductFeatured from "@/components/components/ProductFeatured";
+import ProductGrid from "@/components/components/ProductGrid";
+import ProductMinimal from "@/components/components/ProductMinimal";
+import Sidebar from "@/components/components/Sidebar";
+import TestimonialsCtaServices from "@/components/components/TestimonialsCtaServices";
 
 export default function Home() {
   return (
-    <main className="min-h-[calc(100vh)]  w-full h-full overflow-x-hidden relative">
-      <Hero />
-      <div className=" w-full place-content-center py-20 px-4">
-        <section className="relative">
-          <h2 className="mb-14 text-center text-white font-bold uppercase text-[32px] ">
-            Companies we{" "}
-            <span className="font-semibold text-secondary">collaborate</span> with.
-          </h2>
-          <div className="relative mx-auto max-w-6xl *:border-y-0">
-            <div className="pointer-events-none absolute -top-px left-1/2 h-px w-screen -translate-x-1/2 bg-border" />
-            <LogoCloud />
-            <div className="pointer-events-none absolute -bottom-px left-1/2 h-px w-screen -translate-x-1/2 bg-border" />
+    <main>
+      <Banner />
+      <CategoryStrip />
+      <div className="product-container">
+        <div className="container">
+          <Sidebar />
+          <div className="product-box">
+            <ProductMinimal />
+            <ProductFeatured />
+            <ProductGrid />
           </div>
-        </section>
+        </div>
       </div>
-      <DiecastHeroSection />
+      <TestimonialsCtaServices />
+      <Blog />
     </main>
   );
 }

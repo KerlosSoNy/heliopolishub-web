@@ -1,12 +1,13 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import localFont from 'next/font/local'
-import Navbar from '@/components/navbar/Navbar';
-import AOSInit from '@/lib/AOSInit';
-import AnimationWrapper from '@/lib/AnimationWrapper';
-import { AuthProvider } from '@/context/AuthContext';
-import { ToastProvider } from '@/context/ToastContext';
-import Footer from '@/components/footer/Footer';
+import type { Metadata } from "next";
+import Script from "next/script";
+import "./globals.css";
+import localFont from "next/font/local";
+import AOSInit from "@/lib/AOSInit";
+import AnimationWrapper from "@/lib/AnimationWrapper";
+import NewsletterModal from "@/components/components/NewsletterModal";
+import NotificationToast from "@/components/components/NotificationToast";
+import Header from "@/components/components/Header";
+import Footer from "@/components/components/Footer";
 
 const poppins = localFont({
   src: [
@@ -74,27 +75,23 @@ export const metadata: Metadata = {
     images: ['./favicon.ico'],
   },
 };
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-
     <html lang="en" className={poppins.className}>
       <body className={poppins.className}>
-        <ToastProvider>
-          <div id="modal-root"></div>
-          <AOSInit />
-          <div
-            id="main-content"
-            className="w-full overflow-x-hidden bg-black"
-          >
-            <Navbar />
-            <AnimationWrapper>
-              {children}
-            </AnimationWrapper>
-            <Footer />
-          </div>
-        </ToastProvider>
-        {/* </AuthProvider> */}
+        <AOSInit />
+        <Header />
+        <div className="flex flex-col items-center">
+          <AnimationWrapper>
+            {children}
+          </AnimationWrapper>
+        </div>
+        <Footer />
+        <NewsletterModal />
+        <NotificationToast />
+        <Script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" strategy="afterInteractive" />
+        <Script noModule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" strategy="afterInteractive" />
+        <Script src="/js/script.js" strategy="afterInteractive" />
       </body>
     </html>
   );

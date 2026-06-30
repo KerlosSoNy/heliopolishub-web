@@ -38,7 +38,7 @@ export default function AboutSection3() {
         },
     };
     return (
-        <section className="pt-26 mt-10 px-4 " ref={heroRef}>
+        <section className="pt-26 px-4 " ref={heroRef}>
             <div className="max-w-6xl mx-auto">
                 <div className="relative">
                     {/* Header with social icons */}
@@ -50,12 +50,12 @@ export default function AboutSection3() {
                                 animationNum={0}
                                 timelineRef={heroRef}
                                 customVariants={revealVariants}
-                                className="text-sm font-medium text-white tracking-widest"
+                                className="text-sm font-medium text-black tracking-widest"
                             >
                                 OUR PURPOSE
                             </TimelineContent>
                         </div>
-                        <div className="flex gap-4">
+                        {/* <div className="flex gap-4">
                             <TimelineContent
                                 as="a"
                                 animationNum={0}
@@ -80,7 +80,7 @@ export default function AboutSection3() {
                             >
                                 <Image src="https://pro-section.ui-layouts.com/instagram.svg" alt="insta" width={24} height={24} />
                             </TimelineContent>
-                        </div>
+                        </div> */}
                     </div>
 
                     <TimelineContent
@@ -128,15 +128,15 @@ export default function AboutSection3() {
                         >
                             <div className="flex items-center gap-2 mb-2 sm:text-base text-xs">
                                 <span className="text-red-500 font-bold">1:64</span>
-                                <span className="text-white">Premium Scale Focus</span>
+                                <span className="text-black">Premium Scale Focus</span>
                                 <span className="text-gray-300">|</span>
                             </div>
                             <div className="flex items-center gap-2 mb-2 sm:text-base text-xs">
                                 <span className="text-red-500 font-bold">100%</span>
-                                <span className="text-white">Authentic Releases</span>
+                                <span className="text-black">Authentic Releases</span>
                             </div>
                         </TimelineContent>
-                        <div className="lg:absolute right-0 bottom-16 flex lg:flex-col flex-row-reverse lg:gap-0 gap-4">
+                        <div className="lg:absolute right-0 bottom-16 flex lg:flex-col flex-row-reverse items-end lg:gap-0 gap-4">
                             <TimelineContent
                                 as="div"
                                 animationNum={3}
@@ -145,7 +145,7 @@ export default function AboutSection3() {
                                 className="flex lg:text-4xl sm:text-3xl text-2xl items-center gap-2 mb-2"
                             >
                                 <span className="text-red-500 font-semibold">KaidoHouse</span>
-                                {/* <span className="text-white uppercase">& More</span> */}
+                                {/* <span className="text-black uppercase">& More</span> */}
                             </TimelineContent>
                             <TimelineContent
                                 as="div"
@@ -156,8 +156,8 @@ export default function AboutSection3() {
                             >
                                 {/* <span className="text-red-500 font-bold">& More</span> */}
                                 {/* <span className="text-red-500 font-bold">Kaido House</span> */}
-                                <span className="text-white">Official Partner Hub</span>
-                                <span className="text-white lg:hidden block">|</span>
+                                <span className="text-black">Official Partner Hub</span>
+                                <span className="text-black lg:hidden block">|</span>
                             </TimelineContent>
                         </div>
                     </div>
@@ -165,7 +165,7 @@ export default function AboutSection3() {
                 {/* Main Content */}
                 <div className="grid md:grid-cols-3 gap-8">
                     <div className="md:col-span-2">
-                        <h1 className="sm:text-4xl md:text-5xl text-2xl leading-[110%]! font-semibold text-white mb-8">
+                        <h1 className="sm:text-4xl md:text-5xl text-2xl leading-[110%]! font-semibold text-black mb-8">
                             <VerticalCutReveal
                                 splitBy="words"
                                 staggerDuration={0.1}
@@ -187,7 +187,7 @@ export default function AboutSection3() {
                             animationNum={4}
                             timelineRef={heroRef}
                             customVariants={revealVariants}
-                            className="grid md:grid-cols-2 gap-8 text-white"
+                            className="grid md:grid-cols-2 gap-8 text-black"
                         >
                             <TimelineContent
                                 as="div"
@@ -234,7 +234,7 @@ export default function AboutSection3() {
                                 animationNum={8}
                                 timelineRef={heroRef}
                                 customVariants={revealVariants}
-                                className="text-white text-sm mb-8"
+                                className="text-black text-sm mb-8"
                             >
                                 Diecast Store & Community Hub
                             </TimelineContent>
@@ -246,20 +246,9 @@ export default function AboutSection3() {
                                 customVariants={revealVariants}
                                 className="mb-6"
                             >
-                                <p className="text-white font-medium mb-4">
+                                <p className="text-black font-medium mb-4">
                                     Ready to scale up your private garage or build your dream layout?
                                 </p>
-                            </TimelineContent>
-
-                            <TimelineContent
-                                as="button"
-                                animationNum={10}
-                                timelineRef={heroRef}
-                                customVariants={revealVariants}
-                            >
-                                <div
-                                    onClick={() => console.log('Navigating to collections')}
-                                >EXPLORE THE HUB</div>
                             </TimelineContent>
                         </div>
                     </div>

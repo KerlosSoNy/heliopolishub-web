@@ -59,7 +59,7 @@ const Faq3 = ({
 }: Faq3Props) => {
     return (
         <div className="pb-32">
-            <div className="w-full space-y-16 text-white!">
+            <div className="w-full space-y-16 text-black!">
                 <div className="mx-auto flex max-w-3xl flex-col text-left md:text-center">
                     <h2 className="mb-3 text-3xl font-semibold md:mb-4 lg:mb-6 lg:text-4xl">
                         {heading}
@@ -79,7 +79,7 @@ const Faq3 = ({
                                 </div>
                             </AccordionTrigger>
                             <AccordionContent className="sm:mb-1 lg:mb-2">
-                                <div className="text-muted-foreground lg:text-lg">
+                                <div className="text-muted-foreground lg:text-lg text-start!">
                                     {item.answer}
                                 </div>
                             </AccordionContent>
