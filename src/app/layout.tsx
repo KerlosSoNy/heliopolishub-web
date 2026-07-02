@@ -4,10 +4,10 @@ import "./globals.css";
 import localFont from "next/font/local";
 import AOSInit from "@/lib/AOSInit";
 import AnimationWrapper from "@/lib/AnimationWrapper";
-import NewsletterModal from "@/components/components/NewsletterModal";
-import NotificationToast from "@/components/components/NotificationToast";
-import Header from "@/components/components/Header";
-import Footer from "@/components/components/Footer";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import NewsletterModal from "@/components/NewsletterModal";
+import NotificationToast from "@/components/NotificationToast";
 
 const poppins = localFont({
   src: [

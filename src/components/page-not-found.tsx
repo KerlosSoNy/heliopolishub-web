@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useRef, useState } from "react";
-import AnimatedLinkButton from "./atoms/AnimatedButton";
+import AnimatedLinkButton from "./AnimatedButton";
 
 export default function NotFoundPage() {
   return (
@@ -14,7 +14,6 @@ export default function NotFoundPage() {
 
 // 1. Message Display Component
 function MessageDisplay() {
-  // const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

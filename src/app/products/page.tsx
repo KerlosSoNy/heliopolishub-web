@@ -1,6 +1,4 @@
 import { Suspense } from 'react';
-import ProductCard from '@/components/ProductCard';
-import LoadingFallback from '@/components/LoadingFallback';
 import { fetchProducts } from '@/lib/api';
 
 async function ProductsGrid() {
@@ -21,9 +19,7 @@ async function ProductsGrid() {
 
                 {/* Products Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {products.map((product) => (
-                        <ProductCard key={product.id} {...product} />
-                    ))}
+
                 </div>
 
                 {/* Pagination Info */}
@@ -40,7 +36,7 @@ async function ProductsGrid() {
 export default function ProductsPage() {
     return (
         <main className="min-h-[calc(100vh-4rem)] bg-gradient-to-b from-slate-900 to-slate-800">
-            <Suspense fallback={<LoadingFallback />}>
+            <Suspense fallback={<div>Loading products...</div>}>
                 <ProductsGrid />
             </Suspense>
         </main>

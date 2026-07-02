@@ -1,5 +1,4 @@
-import ClientLoader from '@/components/ClientLoader';
-import React from 'react';
+import ClientLoader from "@/components/ClientLoader";
 
 const Loading = () => {
     return (

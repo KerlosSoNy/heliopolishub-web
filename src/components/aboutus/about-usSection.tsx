@@ -2,8 +2,6 @@
 import { useRef } from "react";
 import { TimelineContent } from "./timeLineAnimation";
 import { VerticalCutReveal } from "./verticalCur";
-import AnimatedLinkButton from "../atoms/AnimatedButton";
-import Image from "next/image";
 
 export default function AboutSection3() {
     const heroRef = useRef<HTMLDivElement>(null);

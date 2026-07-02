@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link";
 import React from "react";
-import ArrowRight from "../../../public/Icons/ArrowRight";
+import ArrowRight from "../../public/Icons/ArrowRight";
 
 type AnimatedLinkButtonBaseProps = {
     label?: string;

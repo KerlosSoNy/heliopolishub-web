@@ -1,9 +1,9 @@
 'use client';
 
 import { useEffect } from 'react';
-import Instagram from '../footer/icons/Instagram';
-import Facebook from '../footer/icons/Facebook';
 import { HomeIcon, MenuIcon, MinusIcon, PlusIcon } from 'lucide-react';
+import Facebook from './footer/icons/Facebook';
+import Instagram from './footer/icons/Instagram';
 
 export default function Header() {
   useEffect(() => {

@@ -1,5 +1,6 @@
 "use client";
-import { MultiStepLoader as Loader } from "@/components/ui/multi-step-loader";
+
+import { MultiStepLoader } from "./multi-step-loader";
 
 const loadingStates = [
   {
@@ -31,7 +32,7 @@ const loadingStates = [
 export default function MultiStepLoaderDemo({ isLoading }: { isLoading: boolean }) {
   return (
     <div className="w-screen h-screen max-w-screen max-h-screen bg-transparent overflow-hidden z-120 fixed flex items-center justify-center">
-      <Loader loadingStates={loadingStates} loading={isLoading} duration={1000} />
+      <MultiStepLoader loadingStates={loadingStates} loading={isLoading} duration={1000} />
     </div>
   );
 }

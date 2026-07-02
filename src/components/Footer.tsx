@@ -1,8 +1,7 @@
-import { footerCategories } from "@/data/products";
 import { IconEmailStamp } from "@tabler/icons-react";
 import { LocateIcon, PhoneIcon } from "lucide-react";
-import Facebook from "../footer/icons/Facebook";
-import Instagram from "../footer/icons/Instagram";
+import Facebook from "./footer/icons/Facebook";
+import Instagram from "./footer/icons/Instagram";
 
 export default function Footer() {
   return (

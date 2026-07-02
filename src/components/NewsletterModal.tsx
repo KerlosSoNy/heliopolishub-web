@@ -1,5 +1,4 @@
 'use client'
-import { ClosedCaptionIcon } from 'lucide-react';
 import { useState } from 'react';
 
 export default function NewsletterModal() {
