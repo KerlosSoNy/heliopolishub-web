@@ -1,17 +1,25 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Cta() {
   return (
     <div className="cta-container">
-      <img src="/assets/images/cta-banner.jpg" alt="summer collection" className="cta-banner" />
+      <Image
+        src="/images/cars/1.JPG"
+        width={500}
+        height={300}
+        alt="summer collection" className="cta-banner max-h-110!"
+      />
 
-      <a href="#" className="cta-content">
-        <p className="discount">25% Discount</p>
+      <div className="absolute top-0 left-0 bg-white/20 backdrop-blur-xs h-full w-full flex flex-col items-center! justify-center! text-center p-4">
+        <p className="text-lg font-bold text-white">25% Discount</p>
 
-        <h2 className="cta-title">Summer collection</h2>
+        <h2 className="text-white text-3xl font-bold">Summer collection</h2>
 
-        <p className="cta-text">Starting @ $10</p>
+        <p className="text-green-500 text-md font-medium">Starting at 1000EGP</p>
 
-        <button className="cta-btn">Shop now</button>
-      </a>
+        <Link href="/" className="text-[#fff] text-xl font-bold mt-4 underline! uppercase">Shop now</Link>
+      </div>
     </div>
   );
 }

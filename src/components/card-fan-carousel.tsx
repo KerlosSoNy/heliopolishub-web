@@ -264,7 +264,7 @@ export default function SocialCards({ cards }: SocialCardsProps) {
   );
 
   return (
-    <section className="flex flex-col items-center w-full py-4 lg:py-8 px-4 md:px-8 relative z-20">
+    <section className="flex flex-col items-center w-full py-4 lg:py-8 px-4 md:px-8 relative z-1">
       <div className="flex items-center justify-center w-full max-w-360">
         <div
           ref={containerRef}

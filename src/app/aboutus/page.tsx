@@ -73,7 +73,7 @@ const Page = () => {
     return (
         <div className="flex flex-col px-3 md:px-6 xl:px-15 2xl:px-25 w-full">
             <AboutSection3 />
-            <div className="h-fit py-18 w-full">
+            <div className="h-fit py-18 w-full z-100">
                 <SocialCards cards={DEMO_CARDS} />
             </div>
             <Faq3 {...demoData} />

@@ -4,10 +4,10 @@ import "./globals.css";
 import localFont from "next/font/local";
 import AOSInit from "@/lib/AOSInit";
 import AnimationWrapper from "@/lib/AnimationWrapper";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NewsletterModal from "@/components/NewsletterModal";
 import NotificationToast from "@/components/NotificationToast";
+import Header from "@/components/Header/Header";
 
 const poppins = localFont({
   src: [
@@ -42,6 +42,11 @@ const poppins = localFont({
 export const metadata: Metadata = {
   title: 'Heliopolis Hub | Premium Diecast Cars & Scale Models Egypt',
   description: 'The ultimate marketplace to buy, sell, and trade premium diecast cars in Egypt. Discover rare 1:64, 1:43, and 1:18 scale models from top brands.',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
   keywords: [
     'diecast cars egypt',
     'scale models cairo',
@@ -55,7 +60,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Heliopolis Hub | Premium Diecast Cars & Scale Models Egypt',
     description: 'The ultimate marketplace to buy, sell, and trade premium diecast cars in Egypt. Find rare scale models from top brands.',
-    url: 'https://heliopoliscore.com',
+    url: 'https://heliopoliscore.com/images/withShadow.png',
     siteName: 'Heliopolis Hub',
     images: [
       {
@@ -78,7 +83,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={poppins.className}>
-      <body className={poppins.className}>
+      <body suppressHydrationWarning className={poppins.className}>
         <AOSInit />
         <Header />
         <div className="flex flex-col items-center">
@@ -87,11 +92,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </AnimationWrapper>
         </div>
         <Footer />
-        <NewsletterModal />
         <NotificationToast />
-        <Script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" strategy="afterInteractive" />
-        <Script noModule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" strategy="afterInteractive" />
-        <Script src="/js/script.js" strategy="afterInteractive" />
+        <NewsletterModal />
       </body>
     </html>
   );

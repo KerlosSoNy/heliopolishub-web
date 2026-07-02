@@ -20,7 +20,7 @@ export default function ProductGrid() {
               )}
 
               <div className="showcase-actions">
-                <button className="btn-action">
+                {/* <button className="btn-action">
                   Love
                 </button>
 
@@ -34,7 +34,7 @@ export default function ProductGrid() {
 
                 <button className="btn-action">
                   +
-                </button>
+                </button> */}
               </div>
             </div>
 

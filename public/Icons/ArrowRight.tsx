@@ -1,6 +1,5 @@
-import React from 'react';
 
-const ArrowRight = ({ color = "#000", className }: { color?: string, className?: string }) => {
+const ArrowRight = ({ className }: { color?: string, className?: string }) => {
     return (
         <svg className={className} width="24" height="24" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <g id="Component 2">

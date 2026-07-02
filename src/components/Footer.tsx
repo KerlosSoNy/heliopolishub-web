@@ -2,6 +2,7 @@ import { IconEmailStamp } from "@tabler/icons-react";
 import { LocateIcon, PhoneIcon } from "lucide-react";
 import Facebook from "./footer/icons/Facebook";
 import Instagram from "./footer/icons/Instagram";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -75,29 +76,29 @@ export default function Footer() {
               <h2 className="nav-title">Our Company</h2>
             </li>
             <li className="footer-nav-item">
-              <a href="#" className="footer-nav-link">
-                Delivery
-              </a>
-            </li>
-            <li className="footer-nav-item">
-              <a href="#" className="footer-nav-link">
-                Legal Notice
-              </a>
-            </li>
-            <li className="footer-nav-item">
-              <a href="#" className="footer-nav-link">
-                Terms and conditions
-              </a>
-            </li>
-            <li className="footer-nav-item">
-              <a href="#" className="footer-nav-link">
+              <Link href="/aboutus" className="footer-nav-link">
                 About us
-              </a>
+              </Link>
             </li>
             <li className="footer-nav-item">
-              <a href="#" className="footer-nav-link">
-                Secure payment
-              </a>
+              <Link href="/delivery" className="footer-nav-link">
+                Delivery
+              </Link>
+            </li>
+            <li className="footer-nav-item">
+              <Link href="/returns" className="footer-nav-link">
+                Return policy
+              </Link>
+            </li>
+            <li className="footer-nav-item">
+              <Link href="/terms" className="footer-nav-link">
+                Terms and conditions
+              </Link>
+            </li>
+            <li className="footer-nav-item">
+              <Link href="/privacy" className="footer-nav-link">
+                Privacy policy
+              </Link>
             </li>
           </ul>
 

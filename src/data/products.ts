@@ -65,19 +65,19 @@ export const bannerSlides = [
 ];
 
 export const topCategories: MainCategory[] = [
-  { icon: "/assets/images/icons/dress.svg", title: "Sports cars", amount: "(53)" },
-  { icon: "/assets/images/icons/coat.svg", title: "Pickup trucks", amount: "(58)" },
-  { icon: "/assets/images/icons/glasses.svg", title: "Motorcycles", amount: "(68)" },
-  { icon: "/assets/images/icons/shorts.svg", title: "Construction rigs", amount: "(84)" },
-  { icon: "/assets/images/icons/tee.svg", title: "Farm tractors", amount: "(35)" },
-  { icon: "/assets/images/icons/jacket.svg", title: "Military vehicles", amount: "(16)" },
-  { icon: "/assets/images/icons/watch.svg", title: "Aircraft", amount: "(27)" },
-  { icon: "/assets/images/icons/hat.svg", title: "Trains & rail", amount: "(39)" },
+  { icon: "/images/cars/1.JPG", title: "Sports cars", amount: "(53)" },
+  { icon: "/images/cars/2.JPG", title: "Pickup trucks", amount: "(58)" },
+  { icon: "/images/cars/3.JPG", title: "Motorcycles", amount: "(68)" },
+  { icon: "/images/cars/4.JPG", title: "Construction rigs", amount: "(84)" },
+  { icon: "/images/cars/5.JPG", title: "Farm tractors", amount: "(35)" },
+  { icon: "/images/cars/6.JPG", title: "Military vehicles", amount: "(16)" },
+  { icon: "/images/cars/7.JPG", title: "Aircraft", amount: "(27)" },
+  { icon: "/images/cars/8.JPG", title: "Trains & rail", amount: "(39)" },
 ];
 
 export const sidebarCategories: SidebarCategory[] = [
   {
-    icon: "/assets/images/icons/dress.svg",
+    icon: "/images/cars/1.JPG",
     label: "Passenger cars",
     items: [
       { name: "Sports cars", stock: "300" },
@@ -87,7 +87,7 @@ export const sidebarCategories: SidebarCategory[] = [
     ],
   },
   {
-    icon: "/assets/images/icons/shoes.svg",
+    icon: "/images/cars/2.JPG",
     label: "Trucks & SUVs",
     items: [
       { name: "Pickup trucks", stock: "45" },
@@ -97,7 +97,7 @@ export const sidebarCategories: SidebarCategory[] = [
     ],
   },
   {
-    icon: "/assets/images/icons/jewelry.svg",
+    icon: "/images/cars/3.JPG",
     label: "Motorcycles",
     items: [
       { name: "Sport bikes", stock: "46" },
@@ -106,7 +106,7 @@ export const sidebarCategories: SidebarCategory[] = [
     ],
   },
   {
-    icon: "/assets/images/icons/perfume.svg",
+    icon: "/images/cars/4.JPG",
     label: "Construction & farm",
     items: [
       { name: "Excavators", stock: "12 pcs" },
@@ -116,7 +116,7 @@ export const sidebarCategories: SidebarCategory[] = [
     ],
   },
   {
-    icon: "/assets/images/icons/cosmetics.svg",
+    icon: "/images/cars/5.JPG",
     label: "Aircraft & aviation",
     items: [
       { name: "Fighter jets", stock: "68" },
@@ -126,7 +126,7 @@ export const sidebarCategories: SidebarCategory[] = [
     ],
   },
   {
-    icon: "/assets/images/icons/glasses.svg",
+    icon: "/images/cars/7.JPG",
     label: "Trains & rail",
     items: [
       { name: "Steam locomotives", stock: "50" },
@@ -134,7 +134,7 @@ export const sidebarCategories: SidebarCategory[] = [
     ],
   },
   {
-    icon: "/assets/images/icons/bag.svg",
+    icon: "/images/cars/6.JPG",
     label: "Accessories",
     items: [
       { name: "Display cases", stock: "62" },
